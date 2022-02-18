@@ -1,2 +1,22 @@
-<h1>{{title}}</h1>
-<router-outlet></router-outlet>
+<mat-toolbar>
+    Covid estadísticas
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav opened mode="side" class="mat-elevation-z8">
+        <mat-list>
+            <mat-list-item> Perfil </mat-list-item>
+            <mat-list-item> Países </mat-list-item>
+            <mat-list-item> Síntomas </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <mat-list>
+            <mat-list-item> Salir </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <app-country></app-country>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

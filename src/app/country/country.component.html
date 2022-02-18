@@ -1,0 +1,58 @@
+<h1>{{title}}</h1>
+<div class="table-container">
+    <table mat-table [dataSource]="countries">
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.Country}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="code">
+            <th mat-header-cell *matHeaderCellDef> Código </th>
+            <td mat-cell *matCellDef="let element"> {{element.CountryCode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="slug">
+            <th mat-header-cell *matHeaderCellDef> Slug </th>
+            <td mat-cell *matCellDef="let element"> {{element.Slug}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="newConfirmed">
+            <th mat-header-cell *matHeaderCellDef> Nuevos </th>
+            <td mat-cell *matCellDef="let element"> {{element.NewConfirmed}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalConfirmed">
+            <th mat-header-cell *matHeaderCellDef> Confirmados </th>
+            <td mat-cell *matCellDef="let element"> {{element.TotalConfirmed}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="newDeaths">
+            <th mat-header-cell *matHeaderCellDef> Muertes </th>
+            <td mat-cell *matCellDef="let element"> {{element.NewDeaths}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalDeaths">
+            <th mat-header-cell *matHeaderCellDef> Total Muertes </th>
+            <td mat-cell *matCellDef="let element"> {{element.TotalDeaths}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="newRecovered">
+            <th mat-header-cell *matHeaderCellDef> Recuperados </th>
+            <td mat-cell *matCellDef="let element"> {{element.NewRecovered}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalRecovered">
+            <th mat-header-cell *matHeaderCellDef> Total Recuperados </th>
+            <td mat-cell *matCellDef="let element"> {{element.TotalRecovered}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+            <td mat-cell *matCellDef="let element"> {{element.Date | date:'yyyy-MM-dd' }} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
