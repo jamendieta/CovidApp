@@ -1,6 +1,6 @@
 # CovidApp
 
-Aplicación desarrollada con Angular v13 que muestra las cifras del covid en el mundo
+Aplicación desarrollada con Angular v13 que muestra las cifras del covid en el mundo (no esta en su totalidad)
 
 ## Development server
 
